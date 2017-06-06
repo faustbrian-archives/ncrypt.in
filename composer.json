@@ -1,7 +1,7 @@
 {
     "name": "faustbrian/ncrypt-php-client",
     "description": "A nCrypt.in Client for PHP",
-    "keywords": ["api", "faustbrian", "faustbrian-ncrypt", "ncrypt", "Brian Faust", "faustbrian"],
+    "keywords": ["api", "ncrypt", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
