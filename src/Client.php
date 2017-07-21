@@ -18,7 +18,7 @@ class Client
     /**
      * @var string
      */
-    private $authCode;
+    public $authCode;
 
     /**
      * Create a new client instance.
