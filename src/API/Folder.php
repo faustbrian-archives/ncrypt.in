@@ -32,7 +32,7 @@ class Folder extends AbstractAPI
             }
         }
 
-        return $this->client->post('api.php', compact('foldername', 'links') + $parameters);
+        return $this->post('api.php', compact('foldername', 'links') + $parameters);
     }
 
     /**
@@ -42,7 +42,7 @@ class Folder extends AbstractAPI
      */
     public function status(string $link): HttpResponse
     {
-        return $this->client->post('api_status.php', compact('link'));
+        return $this->post('api_status.php', compact('link'));
     }
 
     /**
@@ -53,7 +53,7 @@ class Folder extends AbstractAPI
      */
     public function edit(string $folder_id, array $options): HttpResponse
     {
-        return $this->client->post('api_edit.php', compact('folder_id') + $options);
+        return $this->post('api_edit.php', compact('folder_id') + $options);
     }
 
     /**
@@ -63,6 +63,6 @@ class Folder extends AbstractAPI
      */
     public function updateLink(string $link): HttpResponse
     {
-        return $this->client->post('api_update_link.php', compact('link'));
+        return $this->post('api_update_link.php', compact('link'));
     }
 }
