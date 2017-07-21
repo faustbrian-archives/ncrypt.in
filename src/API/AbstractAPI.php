@@ -11,6 +11,7 @@
 
 namespace BrianFaust\nCrypt\API;
 
+use BrianFaust\Http\HttpResponse;
 use BrianFaust\Http\PendingHttpRequest;
 
 abstract class AbstractAPI
@@ -28,5 +29,16 @@ abstract class AbstractAPI
     public function __construct(PendingHttpRequest $client)
     {
         $this->client = $client;
+    }
+
+    /**
+     * @param string $uri
+     * @param array $parameters
+     *
+     * @return \BrianFaust\Http\HttpResponse
+     */
+    public function post(string $uri, array $parameters): HttpResponse
+    {
+        return $this->client->post($uri, $parameters);
     }
 }
