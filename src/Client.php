@@ -16,6 +16,21 @@ use BrianFaust\Http\Http;
 class Client
 {
     /**
+     * @var string
+     */
+    private $authCode;
+
+    /**
+     * Create a new client instance.
+     *
+     * @param string $authCode
+     */
+    public function __construct(?string $authCode = null)
+    {
+        $this->authCode = $authCode;
+    }
+    
+    /**
      * Create a new API service instance.
      *
      * @param string $name
