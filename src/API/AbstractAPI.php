@@ -39,6 +39,6 @@ abstract class AbstractAPI
      */
     public function post(string $uri, array $parameters): HttpResponse
     {
-        return $this->client->post($uri, $parameters);
+        return $this->client->post("$uri?auth_code={$this->client->authCode}", $parameters);
     }
 }
