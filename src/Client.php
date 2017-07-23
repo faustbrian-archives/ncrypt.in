@@ -29,7 +29,7 @@ class Client
     {
         $this->authCode = $authCode;
     }
-    
+
     /**
      * Create a new API service instance.
      *
