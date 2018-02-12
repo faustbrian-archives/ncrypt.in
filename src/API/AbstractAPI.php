@@ -35,7 +35,7 @@ abstract class AbstractAPI
 
     /**
      * @param string $uri
-     * @param array $parameters
+     * @param array  $parameters
      *
      * @return \BrianFaust\Http\HttpResponse
      */
