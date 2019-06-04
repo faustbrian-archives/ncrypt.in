@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of nCrypt.in PHP Client.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\nCrypt;
+namespace Plients\nCrypt;
 
-use BrianFaust\Http\Http;
+use Plients\Http\Http;
 
 class Client
 {
@@ -37,13 +37,13 @@ class Client
      *
      * @param string $name
      *
-     * @return \BrianFaust\nCrypt\API\AbstractAPI
+     * @return \Plients\nCrypt\API\AbstractAPI
      */
     public function api(string $name): API\AbstractAPI
     {
         $client = Http::withBaseUri('http://ncrypt.in/');
 
-        $class = "BrianFaust\\nCrypt\\API\\{$name}";
+        $class = "Plients\\nCrypt\\API\\{$name}";
 
         return new $class($client);
     }

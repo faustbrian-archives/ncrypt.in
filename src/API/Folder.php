@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of nCrypt.in PHP Client.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Ncryptin\API;
+namespace Plients\Ncryptin\API;
 
-use BrianFaust\Http\HttpResponse;
+use Plients\Http\HttpResponse;
 
 class Folder extends AbstractAPI
 {
@@ -22,7 +22,7 @@ class Folder extends AbstractAPI
      * @param array  $links
      * @param array  $parameters
      *
-     * @return \BrianFaust\Http\HttpResponse
+     * @return \Plients\Http\HttpResponse
      */
     public function create(string $foldername, array $links, array $parameters = []): HttpResponse
     {
@@ -40,7 +40,7 @@ class Folder extends AbstractAPI
     /**
      * @param string $link
      *
-     * @return \BrianFaust\Http\HttpResponse
+     * @return \Plients\Http\HttpResponse
      */
     public function status(string $link): HttpResponse
     {
@@ -51,7 +51,7 @@ class Folder extends AbstractAPI
      * @param string $folder_id
      * @param array  $options
      *
-     * @return \BrianFaust\Http\HttpResponse
+     * @return \Plients\Http\HttpResponse
      */
     public function edit(string $folder_id, array $options): HttpResponse
     {
@@ -61,7 +61,7 @@ class Folder extends AbstractAPI
     /**
      * @param string $link
      *
-     * @return \BrianFaust\Http\HttpResponse
+     * @return \Plients\Http\HttpResponse
      */
     public function updateLink(string $link): HttpResponse
     {
